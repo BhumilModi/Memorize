@@ -27,6 +27,8 @@ const UserProfile = () => {
   const navigate = useNavigate();
   const {userId} = useParams();
 
+  localStorage.getItem("user");
+
   useEffect(() => {
     const query = userQuery(userId);
 
@@ -79,7 +81,7 @@ const UserProfile = () => {
               {user?.userName}
             </h1>
             <div className="absolute top-0 z-1 right-0 p-2">
-              {userId === user._id && (
+              {userId === user?._id && (
                 <button
                   type="button"
                   className="bg-mainColor p-2 rounded-full cursor-pointer outline-none shadow-md"

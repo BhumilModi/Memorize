@@ -121,7 +121,7 @@ function Pin({pin: {postedBy, _id, image, save, destination}}) {
         )}
       </div>
       <Link
-        to={`/user-profile/${postedBy?.id}`}
+        to={`/user-profile/${postedBy?._id}`}
         className="flex gap-2 items-center mt-2 shadow-xl rounded-lg"
       >
         <img
